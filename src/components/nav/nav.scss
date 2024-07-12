@@ -1,0 +1,59 @@
+nav{
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+    .nav__hug{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav__profile{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            .nav__user{
+                font-size: 20px;
+            }
+        }
+    }
+
+    .nav__logo{
+        a{
+            display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+        }
+    }
+
+    .nav__cart{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: white;
+
+        .cart{
+            font-size: 20px;
+        }
+
+        select{
+            border: none;
+            padding: 3px 5px;
+            border: .5px solid rgba(255, 255, 255, 0.503);
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+        }
+    }
+}

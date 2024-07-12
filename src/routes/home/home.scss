@@ -1,0 +1,33 @@
+.hero{
+    width: 100%;
+
+    video{
+        width: 100%;
+        height: 100%;
+    }
+
+    .products__wrapper{
+
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+        .product-title{
+            color: #22262A;
+            font-size: 36px;
+            font-weight: 600;
+            margin: 50px 0;
+            font-family: var(--montserat);
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .cards__hug{
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            
+        }
+    }
+}
