@@ -9,14 +9,18 @@ import { BsFacebook } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai"; 
 import { FiShoppingCart } from "react-icons/fi"; 
 import TopCard from '../../components/card/TopCard';
-import AppContext from '../../context/store'; // Import the context
+import AppContext from '../../context/store'; 
+import { useTranslation } from "react-i18next";
 
 const Product = ({ products: initialProducts }) => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [products, setProducts] = useState(initialProducts || []);
   const [error, setError] = useState(null);
-  const [state, dispatch] = useContext(AppContext); // Use context
+  const [state, dispatch] = useContext(AppContext); 
+
+  const { t } = useTranslation();
+  
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -68,6 +72,7 @@ const Product = ({ products: initialProducts }) => {
 
   const topRatedProducts = products.filter((p) => p.rating > 4).slice(0, 3);
 
+
   return (
     <>
       <Nav />
@@ -96,48 +101,48 @@ const Product = ({ products: initialProducts }) => {
               <br />
               <div className="features">
                 <div className="left">
-                  <p>Availability: <strong>{product.availability ? 'Yes' : 'No'}</strong></p>
+                  <p>{t('availability')}: <strong>{product.availability ? 'Yes' : 'No'}</strong></p>
                   <br />
-                  <p>Category: {product.category}</p>
+                  <p>{t('Category')}: {product.category}</p>
                   <br />
-                  <p>Free Shipping: <strong>{product.freeShipping ? 'Yes' : 'No'}</strong></p>
+                  <p>{t('Free Shipping')}: <strong>{product.freeShipping ? 'Yes' : 'No'}</strong></p>
                   <br />
-                  <p>In Stock: <strong>{product.countInStock} pcs</strong></p>
+                  <p>{t('inStock')}: <strong>{product.countInStock} {t('pcs')}</strong></p>
                 </div>
                 <div className="right">
-                  <p>Selling company: <strong>{product.brand}</strong></p>
+                  <p>{t('company')}: <strong>{product.brand}</strong></p>
                   <br />
                   <br />
-                  <p>Purchases this week: <strong>{product.numReviews} pcs</strong></p>
+                  <p>{t('Purchase')}: <strong>{product.numReviews} {t('pcs')}</strong></p>
                 </div>
               </div>
               <br />
               <hr />
               <br />
               <div className="cart-like">
-                <button onClick={handleAddToCart}> <FiShoppingCart />Add to cart</button>
+                <button onClick={handleAddToCart}> <FiShoppingCart />{t('addToCart')}</button>
                 <button><AiOutlineHeart /></button>
               </div>
               <br />
               <div className="share">
-                <a style={{backgroundColor: "#3b5998"}} href="#"><BsFacebook />Share on Facebook</a>
-                <a href="#"><BsTwitter />Share on Twitter</a>
+                <a style={{backgroundColor: "#3b5998"}} href="#"><BsFacebook />{t("shareFb")}</a>
+                <a href="#"><BsTwitter />{t("shareTw")}</a>
               </div>
             </div>
           </div>
           <div className="product__richDescription">
-            <h2>Product Information</h2>
+            <h2>{t("productInfo")}</h2>
             <p>{product.description}</p>
           </div>
           <div className="topRated">
-            <h2>Top Rated Products</h2>
+            <h2>{t("topRated")}</h2>
             <div className="topRated__wrapper">
               {topRatedProducts.length > 0 ? (
                 topRatedProducts.map(product => (
                   <TopCard key={product.id} product={product} />
                 ))
               ) : (
-                <p>No top-rated products found</p>
+                <p>{t("noProducts")}</p>
               )}
             </div>
           </div>
