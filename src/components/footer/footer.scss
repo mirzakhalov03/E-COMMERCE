@@ -1,0 +1,36 @@
+footer{
+    background-color: rgba(30, 143, 255, 0.862);
+    max-width: 100%;
+    width: 100%;
+    color: rgb(43, 43, 43);
+
+    .footer__hug{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 100px 0;
+        // align-items: center;
+        justify-content: space-evenly;
+    }
+    h3{
+        color: rgba(0, 0, 0, 0.573);
+    }
+
+    p{
+        color: rgba(255, 255, 255, 0.721);
+    }
+    .footer__card{
+        width: 300px;
+    }
+
+    hr{
+        opacity: 0.5;
+    }
+    .footer__end{
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: rgba(255, 255, 255, 0.684);
+    }
+}

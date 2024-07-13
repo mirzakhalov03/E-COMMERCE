@@ -1,9 +1,47 @@
 nav{
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     position: fixed;
+    background-color: rgba(0, 0, 0, 0.687);
+    backdrop-filter: blur(10px);
     top: 0;
     z-index: 100;
+    transition: background-color .3s  ease-in-out;
+
+    &.scrolled {
+        background-color: rgba(255, 255, 255, 0.684);
+        backdrop-filter: blur(10px);
+        .nav__profile{
+            color: black;
+
+            .nav__user{
+                color: black;
+            }
+            p{
+                color: black;
+            }
+        }
+
+        
+        .nav__cart {
+            color: black;
+            .nav__link{
+                color: black;
+            }
+
+            select{
+                color: black;
+                border: 1px solid black;
+            }
+        }
+        
+        .nav__logo{
+            a{
+                color: black;
+            }
+        }
+        
+    }
     
     .nav__hug{
         display: flex;
@@ -43,7 +81,11 @@ nav{
         gap: 20px;
         color: white;
 
-        .cart{
+        a{
+            color: white;
+        }
+
+        .cart-icon{
             font-size: 20px;
         }
 
@@ -56,4 +98,8 @@ nav{
             color: white;
         }
     }
+}
+
+.scrolled{
+    background-color: white;
 }

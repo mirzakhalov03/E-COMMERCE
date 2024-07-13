@@ -1,0 +1,78 @@
+.login{
+    width: 100%;
+    padding: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: dodgerblue;
+
+    .login__wrapper{
+        padding: 20px;
+        border-radius: 10px;background-color: white;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.472);
+
+        h1{
+            color: dodgerblue;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+
+            a{
+                color: dodgerblue;
+                font-size: 12px;
+                text-align: center;
+            }
+
+            label{
+                width: 70%;
+                margin: 0 auto;
+                text-align: left;
+
+            }
+            input{
+                width: 70%;
+                margin: 0 auto;
+                
+                padding: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.165);
+                border-radius: 10px;
+                // outline: none;
+            }
+
+            button{
+                width: 70%;
+                margin: 0 auto;
+                padding: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.165);
+                border-radius: 10px;
+                background-color: dodgerblue;
+                color: white;
+                font-size: 18px;
+            }
+
+            
+        }
+        .no-account{
+            
+
+            a{
+                color: dodgerblue;
+            }
+        }
+    }
+    
+}
